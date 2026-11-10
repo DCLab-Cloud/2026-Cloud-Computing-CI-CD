@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: ghcr.io/dclab-cloud/2026-cloud-computing-ci-cd:bootstrap
+          image: ghcr.io/dclab-cloud/2026-cloud-computing-ci-cd@sha256:828b5c8cd7e2c00be88e63ae5b8f64fe6ba6d7844a00cc59845b5afdfd80f303
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
