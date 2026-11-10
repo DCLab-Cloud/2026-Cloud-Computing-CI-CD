@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: k8s-cicd-web
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/DCLab-Cloud/2026-Cloud-Computing-CI-CD.git
+    targetRevision: main
+    path: deploy
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: k8s-cicd-lab
+  syncPolicy:
+    automated:
+      enabled: false
+      selfHeal: false
+      prune: false
